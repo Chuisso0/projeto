@@ -1,0 +1,385 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0; /*padding é o espaço interno entre a borda e o elemento. ele aumenta o espaço dentro de um elemento mas não afeta o que está ao redor dele*/
+    box-sizing: border-box; /*inclui o padding e a borda*/
+}
+
+html body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #D6D6D6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+header {
+    background: linear-gradient(135deg, #84c4e4, #6BCF85);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    display: flex; /*coloca a logo e o nome do site um ao lado do outro*/  
+    justify-content: flex-start;  
+    /*align-items: center; alinha os itens no centro vertical*/
+}
+
+.logo img {
+    height: 5rem;
+    margin: 1rem;
+    
+}
+
+.logo h1 {
+    font-family: 'Matemasie';
+    text-shadow: 2px 2px 3px rgb(18, 81, 110);
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    /*justify-content: space-around; distribui igualmente os espaços dos elementos ao longo da linha*/
+}
+
+nav ul li {
+    margin: 0 1rem;
+    font-size: 1.3rem;
+}
+
+nav a {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    text-decoration: none;
+    color: #E2F3FF;
+}
+
+nav li a:hover {
+    color: rgb(34, 90, 34);
+    background-color: #96dea24e;
+    padding: .5rem;
+    border-radius: 2rem;
+    border-spacing: .5rem;
+    transition-duration: .3s;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*alinha os itens verticalmente*/
+    gap: 2rem;
+    flex-wrap: wrap; /*os itens vão para a próxima linha caso não haja mais espaço*/
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.imagem {
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+}
+
+.texto {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+main h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Sofadi One', cursive;
+    padding: 30px 0px 3px 0px ;
+    color: #15b715;
+}
+img{
+    height: 20vw;
+    border-radius: 30px 0px 0px 30px;
+    
+    
+}
+main{
+    text-align: center;
+}
+main h1{
+    position: relative;
+    display: inline-block;
+}
+main h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #0f810f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+main h1:hover::after {
+    transform: scaleX(1);
+  }
+main h1::before {
+    content: '';
+    position: absolute;
+    right: 100%; /* Posiciona à Esquerda do texto */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%) rotate(-180deg); /* Ajusta verticalmente */
+    width: 45px; /* Largura da imagem */
+    height: 45px; /* Altura da imagem */
+    background-image: url(/img/vet2.png); /* URL da imagem */
+    background-size: contain; /* Ajusta o tamanho da imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    opacity: 0; /* Inicialmente invisível */
+    transform-origin: center; /* Define o centro como ponto de rotação */
+    transition: opacity 0.3s ease, transform 0.5s ease; /* Transição suave */
+  }
+  main h1:hover{
+    transform: scale(1.02);
+    text-indent: 10px;
+    transition: 0.1s;
+  }
+  main h1:hover::before {
+    opacity: 1; /* Torna a imagem visível no hover */
+    transform: translateY(-50%) rotate(0deg); /* Aplica a rotação e o deslocamento */
+
+  }
+  section article h2{ /*TITULO DENTRO DOS QUADRADOS*/
+    position: relative;
+    display: inline-block;
+  }
+  section article h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #0f810f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  section article h2:hover::after {
+    transform: scaleX(1);
+  }
+section article h2::before {
+    content: '';
+    position: absolute;
+    right: 100%; /* Posiciona à Esquerda do texto */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%) rotate(-180deg); /* Ajusta verticalmente */
+    width: 45px; /* Largura da imagem */
+    height: 45px; /* Altura da imagem */
+    background-image: url(/img/vet.png); /* URL da imagem */
+    background-size: contain; /* Ajusta o tamanho da imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    opacity: 0; /* Inicialmente invisível */
+    transform-origin: center; /* Define o centro como ponto de rotação */
+    transition: opacity 0.3s ease, transform 0.5s ease; /* Transição suave */
+  }
+  section article h2:hover{
+    transform: scale(1.02);
+    text-indent: 10px;
+    transition: 0.1s;
+  }
+  section article h2:hover::before {
+    opacity: 1; /* Torna a imagem visível no hover */
+    transform: translateY(-50%) rotate(0deg); /* Aplica a rotação e o deslocamento */
+  }
+
+section {
+    
+    max-width: 80vw;
+     /* centraliza horizontalmente */
+    padding: 3rem;
+    border-radius: 20px;
+    transition: transform 0.3s;
+    text-align: center; /*centraliza o texto verticalmente*/
+    display: flex;
+    margin-bottom: 5vh;
+}
+h1#titpag{
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-variant: small-caps;
+}
+section.Novo-modelo{
+    display: block;
+    background-color: #B0E0E6;
+    width: 40vw;
+    box-shadow: 1px 1px 9px 0px #00000063;
+}
+section.Novo-modelo img{
+    border-radius: 30px
+}
+section.Novo-modelo article{
+    margin: auto;
+    width: 32vw;
+}
+div.serviços{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+div.serviços section{
+    margin: 20px;
+}
+article{
+    display: block;
+    width: 50vw;
+    
+}
+.serviços p{
+    color:#139c13;
+    
+}
+.serviços{
+    display: flex;
+    
+}
+
+section a {
+    text-decoration: none;
+}
+section:hover {
+    transform: scale(1.02);         /* Suave aumento no hover */
+    
+}
+
+section h2 {
+    font-family:'Sofadi One', cursive;
+    font-size: 30px;
+    line-height: 2;
+    color: #15b715; /* Um verde mais suave e com bom contraste */
+    font-variant: small-caps;
+}
+section.sect2{
+    background-image: url(/img/pexels-tima-miroshnichenko-6235244.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Tamanho mais legível */
+    font-weight: 400; /* Um peso leve e suave */
+    text-align: center;
+    line-height: 1.5;
+    color: rgb(1, 117, 47);
+}
+
+footer {
+    background-color: rgb(132, 196, 228);
+    color: #ffff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /*organiza o footer em coluna*/
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem; /*espaço entre as colunas e o rodapé*/
+    padding: 0 20rem;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column; /*organiza a logo e a descrição em coluna*/
+    align-items: center;
+}
+
+#descrip {
+    max-width: 10rem;
+    
+}
+
+#menu {
+    columns: 2;
+    column-gap: 40px;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu a i {
+    margin-right: 8px;
+}
+
+#menu a, i {
+    font-size: .9rem;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+.column1 img {
+    height: 3.7rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.column2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column2 ul li {
+    margin-bottom: 0.5rem; /*espaço entre um link e outro*/
+}
+
+footer a {
+    font-family: 'Montserrat';
+    font-size: small;
+    text-decoration: none;
+    color: #fff;
+}
+
+footer p {
+    font-family: 'Montserrat';
+    text-align:center;
+    margin-top: 1rem;
+    margin-bottom: 5px;
+}
+
+#da {
+    font-family: 'Montserrat';
+    text-align: start;
+}
