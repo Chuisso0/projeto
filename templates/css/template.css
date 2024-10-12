@@ -135,7 +135,7 @@ main h1::after {
     width: 100%;
     background: #0f810f;
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: center;
     transition: transform 0.3s ease;
   }
   
@@ -180,7 +180,7 @@ main h1::before {
     width: 100%;
     background: #0f810f;
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: center;
     transition: transform 0.3s ease;
   }
   section article h2:hover::after {
