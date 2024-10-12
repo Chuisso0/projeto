@@ -148,8 +148,8 @@ main h1::before {
     right: 100%; /* Posiciona à Esquerda do texto */
     top: 50%; /* Centraliza verticalmente */
     transform: translateY(-50%) rotate(-180deg); /* Ajusta verticalmente */
-    width: 45px; /* Largura da imagem */
-    height: 45px; /* Altura da imagem */
+    width: 50px; /* Largura da imagem */
+    height: 50px; /* Altura da imagem */
     background-image: url(/img/vet2.png); /* URL da imagem */
     background-size: contain; /* Ajusta o tamanho da imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
